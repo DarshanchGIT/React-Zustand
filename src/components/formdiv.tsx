@@ -39,6 +39,7 @@ export const FormDiv = () => {
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
             placeholder="Product Name"
+            required
           />
         </div>
         <div className="flex flex-col">
@@ -52,6 +53,7 @@ export const FormDiv = () => {
             value={productPrice}
             onChange={(e) => setProductPrice(e.target.value)}
             placeholder="Product Price"
+            required
           />
         </div>
 
