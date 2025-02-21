@@ -20,19 +20,20 @@ export const Products = () => {
             </div>
             <div className="flex item-center justify-center gap-4">
               <div className=" flex item-center justify-center bg-gray-800 text-white font-semibold py-3 rounded-lg transition-all">
-                <button>
+                <button onClick={() => decreaseQuantity(product.id)}>
                   <Minus className="font-bold mx-3 text-red-600 hover:scale-110 transition-transform"></Minus>
                 </button>
                 <div className="flex justify-center items-center ">
                   {product.quantity}
                 </div>
-                <button>
+                <button onClick={() => increaseQuantity(product.id)}>
                   <Plus className="font-bold mx-3 text-indigo-400 hover:scale-110 transition-transform"></Plus>
                 </button>
               </div>
               <button
                 type="submit"
                 className="bg-gray-800 text-white font-semibold py-3 rounded-lg transition-all"
+                onClick={() => deleteProduct(product.id)}
               >
                 <Trash className="mx-3 text-red-600 hover:scale-110 transition-transform"></Trash>
               </button>
